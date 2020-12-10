@@ -30,7 +30,7 @@ class AbstractPlayer:
         raise NotImplementedError
     
 
-    def make_move(self, time_limit):
+    def make_move(self, time_limit, players_score):
         """Make move with this Player.
         input:
             - time_limit: float, time limit for a single turn.

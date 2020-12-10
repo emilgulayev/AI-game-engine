@@ -4,7 +4,8 @@ import os, sys
 import utils
 
 if __name__ == "__main__":
-    players_options = [ x+'Player' for x in ['Live', 'Simple', 'Minimax', 'Alphabeta', 'GlobalTimeAB', 'LightAB', 'Compete']]
+    players_options = [x+'Player' for x in ['Live', 'Simple', 'Minimax', 'Alphabeta', 'GlobalTimeAB', 'LightAB',
+                                            'HeavyABPlayer', 'Compete']]
 
     parser = argparse.ArgumentParser()
     
@@ -42,6 +43,7 @@ if __name__ == "__main__":
     # check validity of board file type and existance
     board_file_type = args.board.split('.')[-1]
     if board_file_type != 'csv':
+        print("saar")
         raise Exception(f'Wrong board file type argument, {board_file_type}.')
     if not args.board in os.listdir('boards'):
         raise Exception(f'Board file {args.board} does not exist in "boards" directory.')

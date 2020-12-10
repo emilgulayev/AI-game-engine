@@ -32,8 +32,7 @@ class Player(AbstractPlayer):
             return True
         return False
 
-
-    def make_move(self, time_limit):
+    def make_move(self, time_limit, players_score):
         assert self.pos is not None
         print('Insert your move:')
         

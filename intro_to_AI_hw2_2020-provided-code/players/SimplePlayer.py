@@ -37,8 +37,7 @@ class Player(AbstractPlayer):
         counter = len(np.where(board == 1)[0])
         return counter
 
-
-    def make_move(self, time_limit):  # time parameter is not used, we assume we have enough time.
+    def make_move(self, time_limit, players_score):  # time parameter is not used, we assume we have enough time.
 
         assert self.count_ones(self.board) == 1
 

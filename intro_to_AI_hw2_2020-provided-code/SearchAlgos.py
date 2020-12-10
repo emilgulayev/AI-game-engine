@@ -5,18 +5,18 @@ from utils import ALPHA_VALUE_INIT, BETA_VALUE_INIT
 
 
 class SearchAlgos:
-    def __init__(self, utility, succ, perform_move):
+    def __init__(self, utility, succ, perform_move, goal):
         """The constructor for all the search algos.
         You can code these functions as you like to, 
         and use them in MiniMax and AlphaBeta algos as learned in class
         :param utility: The utility function.
         :param succ: The succesor function.
         :param perform_move: The perform move function.
+        :param goal: function that check if you are in a goal state.
         """
         self.utility = utility
         self.succ = succ
         self.perform_move = perform_move
-
 
     def search(self, state, depth, maximizing_player):
         pass
